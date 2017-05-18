@@ -11,7 +11,7 @@ const todos = [{
 }
 ]
 
-//Wipes out the Mongo collection before the test is run
+//Wipes out the Mongo collection before the test is run and adds the dummy data above
 beforeEach((done)=>{
   Todo.remove({}).then(()=> {
     return Todo.insertMany(todos);
